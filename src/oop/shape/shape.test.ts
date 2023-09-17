@@ -1,7 +1,7 @@
 import { describe, expect, it } from "bun:test";
 import { Circle, Rectangle, calculateTotalArea } from "./shape";
 
-describe("OOP concepts", () => {
+describe("OOP", () => {
   let circle: Circle;
   let rectangle: Rectangle;
 
