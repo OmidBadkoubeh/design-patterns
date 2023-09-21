@@ -20,6 +20,12 @@ class PaypalProcessor extends PaymentProcessor {
   }
 }
 
+class BitcoinProcessor extends PaymentProcessor {
+  processPayment(amount: number): void {
+    console.log(`Processing bitcoin payment - amount: ${amount}`);
+  }
+}
+
 function executePayment(paymentProcessor: PaymentProcessor, amount: number): void {
   paymentProcessor.processPayment(amount);
 }
@@ -27,7 +33,9 @@ function executePayment(paymentProcessor: PaymentProcessor, amount: number): voi
 const creditCard = new CreditCardProcessor();
 const debitCard = new DebitCardProcessor();
 const paypal = new PaypalProcessor();
+const bitcoin = new BitcoinProcessor();
 
 executePayment(creditCard, 100);
 executePayment(debitCard, 200);
 executePayment(paypal, 150);
+executePayment(bitcoin, 1);
