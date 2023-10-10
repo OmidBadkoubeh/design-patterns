@@ -37,7 +37,15 @@
 
       // The arguments to pass to the `bun` executable, if any.
       // Unlike `args`, these are passed to the executable itself, not the program.
-      "runtimeArgs": [],
+      "runtimeArgs": []
+    },
+    {
+      "type": "bun",
+      "request": "launch",
+      "name": "Watch Bun",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "watchMode": true
     },
     {
       "type": "bun",
@@ -46,7 +54,7 @@
 
       // The URL of the WebSocket inspector to attach to.
       // This value can be retreived by using `bun --inspect`.
-      "url": "ws://localhost:6499/",
+      "url": "ws://localhost:6499/"
     }
   ]
 }
