@@ -23,6 +23,15 @@ describe("Singleton pattern", () => {
     expect(instance2.value).toBe(10);
   });
 
+  it("should set value of instance2 to 25", () => {
+    instance2.value = 25;
+    expect(instance2.value).toBe(25);
+  });
+
+  it("should get value of instance1 and equals to 25", () => {
+    expect(instance1.value).toBe(25);
+  });
+
   it("should show instance1 and instance2 are equal", () => {
     expect(instance1).toBe(instance2);
   });
