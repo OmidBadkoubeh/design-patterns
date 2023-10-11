@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from "bun:test";
 import { Singleton } from "./Singleton";
 
-describe("Singleton pattern", () => {
+describe("Singleton Pattern", () => {
   let instance1: Singleton;
   let instance2: Singleton;
 
